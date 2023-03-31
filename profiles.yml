@@ -1,14 +1,14 @@
-default:
+soccer_538:
   target: dev
   outputs:
     dev:
       dataset: dbt_shipyard
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: /home/nxtwave/Downloads/project-on-dbt-379106-829d80980b39.json
-      location: asia-south1
+      keyfile: "{{ env_var('BIGQUERY_KEYFILE') }}"
+      location: US
       method: service-account
       priority: interactive
-      project: project-on-dbt-379106
+      project: dbt-demos-382310
       threads: 4
       type: bigquery
